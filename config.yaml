@@ -83,7 +83,7 @@ params:
     backgroundColor: "white"                # default "#eaedf0"
     secondaryBackgroundColor: "white"       # default "#64ffda1a"
     primaryColor: "black"                   # default "#007bff"
-  #  secondaryColor: "black"                # default "#f8f9fa"
+    #  secondaryColor: "black"              # default "#f8f9fa"
 
     darkmode:
     #  textColor:                           # default "#e4e6eb"
