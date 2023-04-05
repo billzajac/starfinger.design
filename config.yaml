@@ -78,20 +78,20 @@ params:
 
   # color preference
   color:
-    textColor: "black"          # default "#343a40"
-    secondaryTextColor: "black" # default "#6c757d"
-    backgroundColor: "white"    # default "#eaedf0"
-    secondaryBackgroundColor: "white"  # default "#64ffda1a"
-    primaryColor: "black"       # default "#007bff"
-  #  secondaryColor: "black"     # default "#f8f9fa"
+    textColor: "black"                      # default "#343a40"
+    secondaryTextColor: "black"             # default "#6c757d"
+    backgroundColor: "white"                # default "#eaedf0"
+    secondaryBackgroundColor: "white"       # default "#64ffda1a"
+    primaryColor: "black"                   # default "#007bff"
+  #  secondaryColor: "black"                # default "#f8f9fa"
 
-  #   darkmode:
-  #     textColor:
-  #     secondaryTextColor:
-  #     backgroundColor:
-  #     secondaryBackgroundColor:
-  #     primaryColor:
-  #     secondaryColor:
+    darkmode:
+    #  textColor:                           # default "#e4e6eb"
+    #  textSecondaryColor:                  # default "#b0b3b8"
+      backgroundColor: "#212529"            # default "#18191a"
+    #  secondaryBackgroundColor: "#18191a"  # default "#212529"
+    #  primaryColor:                        # default "#ffffff"
+    #  secondaryColor:                      # default "#212529"
 
   # If you want to customize the menu, you can change it here
   navbar:
