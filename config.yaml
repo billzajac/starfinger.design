@@ -157,7 +157,7 @@ params:
     enable: true
     title: "Press"
     items:
-      - title: "Life in Constant Movement (ŽIVOT U KONSTANTNOM POKRETU)"
+      - title: "Life in Constant Movement"
         source: "Refresh Your Life"
         img: "https://ryl.rs/wp-content/uploads/2021/06/selmaberisalic1.jpg"
         date: 2021-06-28
@@ -167,12 +167,12 @@ params:
         img: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/f27e6c4188052.5601d87a942a2.jpg"
         date: 2010-05-30
         url: "https://www.behance.net/gallery/716553/Shapeshifters-Shaping-Fashion-Silhouettes?locale=en_US"
-      - title: "Fashion as Destiny (MODA KAO SUDBINA)"
+      - title: "Fashion as Destiny"
         source: "Refresh Your Life"
         img: "https://ryl.rs/wp-content/uploads/2018/04/selmastarfinger1.jpg"
         date: 2018-04-11
         url: "https://ryl.rs/moda-kao-sudbina/"
-      - title: "Selma Starfinger: About fashion, young designers and women in the Balkans (O modi, mladim dizajnerima i ženama na Balkanu)"
+      - title: "Selma Starfinger: About fashion, young designers and women in the Balkans"
         source: "Elle Serbia"
         img: "https://static.elle.rs/Pictures/950/1689/105808/jpeg/selma_stratfinger_intervju_577901437"
         date: 2018-03-23
@@ -182,7 +182,7 @@ params:
         img: "https://visitbih.ba/wp-content/uploads/2017/10/selma-berisalic-starfinger-23082017-MZ-24.jpg"
         date: 2017-10-30
         url: "https://visitbih.ba/en/selma-berisalic-my-models-are-worn-by-rihanna-fergie-coco-rocha-maelys-tanovic/"
-      - title: "Ljubljana Fashion Week (LJFW) 2017, fourth day (četrti dan)"
+      - title: "Ljubljana Fashion Week (LJFW) 2017, fourth day"
         source: "mediaspeed.net"
         img: "https://images.mediaspeed.net/fotografije/medium/719835.jpg"
         date: 2017-09-11
@@ -197,7 +197,7 @@ params:
         img: "https://eurovisionary.com/wp-content/uploads/2016/04/image.jpeg"
         date: 2016-04-05
         url: "https://eurovisionary.com/bosnia-herzegovina-stockholm-outfits-designed-tom-rebl/amp/"
-      - title: "Selma Starfinger – a brand for self-aware, well-built and creative women (brend za samosvjesne, izgrađene i kreativne žene)"
+      - title: "Selma Starfinger – a brand for self-aware, well-built and creative women"
         source: "Fashion.Beauty.Love"
         img: "https://i0.wp.com/fbl.ba/wp-content/uploads/2016/03/selma-starfinger-2.jpg?zoom=2&resize=585%2C775&ssl=1"
         date: 2016-03-25
@@ -217,12 +217,12 @@ params:
         img: "https://cdn.imago-images.de/bild/st/0115418090/m.jpg"
         date: 2014-10-23
         url: "https://www.imago-images.de/st/0115418090"
-      - title: "Martin Saira in the great design of Selma Starfinger on the SFF red carpet (Martina Saira u sjajnom dizajnu Selme Starfinger na crvenom tepihu SFF-a)"
+      - title: "Martin Saira in the great design of Selma Starfinger on the SFF red carpet"
         source: "Bonjour."
         img: "https://bonjour.ba/uploads/1/stories/2014_08/sff_03_martina/sff_martina_03.jpg"
         date: 2014-08-19
         url: "https://bonjour.ba/martina-saira-u-sjajnom-dizajnu-selme-starfinger-na-crvenom-tepihu-sff-a"
-      - title: "Selma Starfinger design from last night and in Sarajevo (Selma Starfinger dizajn od sinoć i u Sarajevu)"
+      - title: "Selma Starfinger design from last night and in Sarajevo"
         source: "Bonjour."
         img: "https://bonjour.ba/uploads/1/stories/2014_06/ss.jpg"
         date: 2014-06-13
@@ -247,7 +247,7 @@ params:
         img: "http://1.bp.blogspot.com/-32nlZAwITuc/UInoOR8PPpI/AAAAAAAAB48/yCXnQumQFyM/s280/167008_138475062882097_6009055_n.jpg"
         date: 2012-10-03
         url: "http://clubfashionista.blogspot.com/2012/10/selma-berisalic-starfinger-one-of-most.html?m=1"
-      - title: "Selma Berisalić - Bh. a designer with an enviable foreign career (dizajnerica sa zavidnom inozemnom karijerom)"
+      - title: "Selma Berisalić - Bh. a designer with an enviable foreign career"
         source: "akta"
         img: "https://www.akta.ba/resources/Article/SmallImages/Selma_Berisalic_170412.jpg"
         date: 2012-04-17
@@ -267,7 +267,7 @@ params:
         img: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F21%2F2010%2F05%2Fomahyra-mota-bellos-2010-290-1.jpg&q=60"
         date: 2010-05-23
         url: "https://peopleenespanol.com/gallery/ladies-red-carpet/?slide=168207#168207"
-      - title: "A successful Sarajka on the New York fashion scene (Uspješna Sarajka na modnoj sceni New Yorka)"
+      - title: "A successful Sarajka on the New York fashion scene"
         source: "BL!N"
         img: "https://banjalukain.com/media/pictures/2010/11/02/64252b54eb2532264fa38131192e9483.jpg"
         date: 2010-02-11
@@ -277,7 +277,7 @@ params:
         img: "https://static.klix.ba/media/images/vijesti/100901096.jpg"
         date: 2010-02-09
         url: "https://www.klix.ba/lifestyle/modailjepota/kreacije-predstavila-i-bosanka-koja-zivi-i-radi-u-ny/100901096"
-      - title: "Berliners win prizes in China (Berliner räumen Preize in China ab)"
+      - title: "Berliners win prizes in China"
         source: "Fashion United"
         img: "https://fashionunited.com/developers/logo/icon-logo-613x357.jpg"
         date: 2008-05-04
