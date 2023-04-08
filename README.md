@@ -12,6 +12,13 @@ Hosting on cloudflare pages
 
 ### Add gallery page and add lots of images
 
+* Looking at
+    * https://github.com/bep/gallerydeluxe
+    * https://github.com/billzajac/hugo_gallerydeluxe_starter
+    * https://discourse.gohugo.io/t/new-google-photo-style-gallery-theme-module/40593
+    * https://hugocodex.org/add-ons/image-gallery/
+
+
 ### Add videos
 
 * 2018 Eurovision Song Contest
