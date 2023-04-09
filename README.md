@@ -10,13 +10,14 @@ Hosting on cloudflare pages
 
 ## TODO
 
-### Add gallery page and add lots of images
+### Add nice paging to photos from gallery (lightbox or something)
 
 * Looking at
     * https://github.com/bep/gallerydeluxe
     * https://github.com/billzajac/hugo_gallerydeluxe_starter
     * https://discourse.gohugo.io/t/new-google-photo-style-gallery-theme-module/40593
-    * https://hugocodex.org/add-ons/image-gallery/
+
+* Just ended up using https://hugocodex.org/add-ons/image-gallery/ for now
 
 
 ### Add videos
@@ -24,7 +25,6 @@ Hosting on cloudflare pages
 * 2018 Eurovision Song Contest
     * https://www.youtube.com/watch?v=WkOFnIjGrkw&t=108s
     * https://www.eurovision-song-reviews.com/2018/03/nova-deca-sanja-ilic-balkanika-eurovision-serbia.html
-
 
 * 2012 Eurovision Song Contest
     * https://youtu.be/RPCmD2Gqjtc?t=21
