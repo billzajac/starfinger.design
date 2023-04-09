@@ -56,7 +56,7 @@ params:
   animate: true
 
   theme:
-    # disableThemeToggle: true
+    disableThemeToggle: true
     defaultTheme: "light" # dark
 
   font:
@@ -87,19 +87,18 @@ params:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
     brandLogo: "/selmalogo-gold.svg" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
-    brandName: " " # Brand name for the brand | default is the title variable # need a space to override default
+    brandName: "Selma Starfinger" # Brand name for the brand | default is the title variable # need a space to override default
     disableSearch: true
     # searchPlaceholder: "Search"
     menus:
       disableAbout: false
-      disablePress: false
       disableContact: false
 
   # Hero
   hero:
     enable: true
     intro: ""
-    title: "Selma Starfinger"
+    title: ""
     subtitle: "International Award-Winning Fashion Designer"
     content: "Exploring the modern experience with a timeless twist, electrically combining both feminine and masculine elements in her designs."
     image: /images/selma-headshot-white-suit.webp
