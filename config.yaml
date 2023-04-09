@@ -35,6 +35,16 @@ Menus:
       title: Press
       url: /press
       weight: 2
+    - identifier: about
+      name: About
+      title: About
+      url: /about
+      weight: 3
+    - identifier: contact
+      name: Contact
+      title: Contact
+      url: /contact
+      weight: 4
 
 params:
   title: "Selma Starfinger"
@@ -91,8 +101,8 @@ params:
     disableSearch: true
     # searchPlaceholder: "Search"
     menus:
-      disableAbout: false
-      disableContact: false
+      disableAbout: true
+      disableContact: true
 
   # Hero
   hero:
@@ -280,9 +290,9 @@ params:
   contact:
     enable: true
     # title: "Custom Name"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    content: If you'd like to collaborate, have a question, or just want to say hi, you can find me @SelmaStarfinger on Instagram
     email: sa@selmastarfinger.com
-    btnName: Email me
+    btnName: or Email me
     # formspree:
     #   enable: true # `contact.email` value will be ignored
     #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
