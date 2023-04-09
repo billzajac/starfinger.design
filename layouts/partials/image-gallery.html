@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
+<!-- This section id="single" is what gives the rounded corners on the photos -->
+<section id="single" class="py-0 py-sm-5">
+  <div id="gallery" class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-18 col-md-18 col-lg-15">
+        <div class="pr-lg-4">
+	  <article class="page-content  p-2">
+<style>
+    .image-gallery {overflow: auto; margin-left: -1%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 32%;}
+    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
+    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+    .image-gallery li a img {width: 100%; display: block;}
+</style>
+<!-- the li float width will determine how many pics per row. I like 3 => 32% -->
+
+<!-- Set the var gallery_dir in your page to the dir you want -->
+{{ $dir := string .gallery_dir }}
+<ul class="image-gallery">
+<!-- Sort assets/$gallery_dir descending and get only the image types I care about -->
+<!-- Note caps is important due to my regex -->
+<!-- Using variable name $imageres because $image seemed to cause issues at times -->
+  {{ range $index, $element := (sort (readDir (delimit (slice "assets" $dir) "/")) "Name" "desc") }}
+  {{ if (findRE ".jpg$|.png$|.webp$" .Name) }}
+  {{- $imageres := resources.Get (printf "%s/%s" $dir .Name) -}}
+  {{- $imagetitle := index (split .Name ".") 0 -}}
+    <li>
+      <!-- Since this is a gallery, I want very high quality, hence q97 and q99 -->
+      <a href="{{ ($imageres.Fit "1600x1600 q99").Permalink }}" class="lightbox-image">
+        <!--img src="{{ ($imageres.Fit "300x500 q97").Permalink }}"-->
+        <img src="{{ ($imageres.Resize "300x q97").Permalink }}">
+      </a>
+    </li>
+  {{ end }}
+  
+{{ end }}
+</ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+{{ if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) }}
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
+{{ end }}
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>

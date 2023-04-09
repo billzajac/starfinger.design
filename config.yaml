@@ -28,7 +28,7 @@ Menus:
     - identifier: gallery
       name: Gallery
       title: Gallery
-      url: /gallery
+      url: "#gallery"
       weight: 1
     - identifier: press
       name: Press
@@ -289,8 +289,9 @@ params:
   #Contact
   contact:
     enable: true
+    image: /images/20090109_0808_Selma.jpg
     # title: "Custom Name"
-    content: If you'd like to collaborate, have a question, or just want to say hi, you can find me @SelmaStarfinger on Instagram
+    content: If you'd like to collaborate, have a question, or just want to say hi, you can find me [@SelmaStarfinger](https://www.instagram.com/selmastarfinger/) on Instagram
     email: sa@selmastarfinger.com
     btnName: or Email me
     # formspree:
