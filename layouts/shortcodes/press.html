@@ -1,14 +1,13 @@
 <section id="press" class="py-5">
     <div class="container">
-        <h3 class="text-center">{{ .Site.Params.press.title | default "Press" }}</h3>
         <div class="px-0 px-md-5 px-lg-5">
             <div class="row justify-content-center px-3 px-md-5 px-lg-5">
-                {{ range .Site.Params.press.items }}
+                {{ range .Page.Params.items }}
                 {{ if .url }}
                 <div class="col-lg-4 col-md-6 my-3">
                     <a class="card my-3 h-100 p-3" href="{{ .url }}" title="{{ .title }}" target="_blank">
                         <div class="card-body bg-transparent">
-				<h5 class="card-title bg-transparent">{{ .source }}</h5>
+			  <h5 class="card-title bg-transparent">{{ .source }}</h5>
                             <div class="card-text secondary-font">
                                 {{ .title }}
                             </div>
@@ -40,7 +39,7 @@
                     </div>
                 </div>
                 {{ end }}
-                {{ end }}
+              {{ end }}
             </div>
         </div>
     </div>
