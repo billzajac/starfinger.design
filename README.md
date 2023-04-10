@@ -10,7 +10,7 @@ Hosting on cloudflare pages
 
 ## TODO
 
-### Add nice paging to photos from gallery (lightbox or something)
+### Add nice paging flipping to photos from gallery (lightbox or something)
 
 * Looking at
     * https://github.com/bep/gallerydeluxe
