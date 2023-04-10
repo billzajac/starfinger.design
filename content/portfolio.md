@@ -13,7 +13,7 @@ items:
   - info: Tulum
     gallery_dir: portfolio/tulum
   - info: Omahyra Moto Garcia
-    gallery_dir: portfolio/tulum
+    gallery_dir: portfolio/omahrya
   - info: Coco Rocha
     gallery_dir: portfolio/coco
   - info: Martina Saira in Bonjour
