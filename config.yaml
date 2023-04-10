@@ -2,7 +2,7 @@ baseURL: "https://starfinger.design"
 languageCode: "en-us"
 title: "Selma Starfinger"
 theme: hugo-profile
-timeout: 600000
+#timeout: 600000
 
 outputs:
   home:
@@ -137,20 +137,6 @@ params:
     #    - icon: /fav.png
     #      url: "https://example.com"
 
-  # About
-  about:
-    enable: true
-    title: About Selma
-    image: /images/selma-headshot-blue-slight-crop.jpg
-    content: |-
-      Born in Sarajevo, Bosnia-Herzegovina, then granted sanctuary in Germany for the second half of her teen years, Selma was raised with a uniquely international perspective. Following the Dayton Accords, she returned to Sarajevo to assist her family and her native country recover. In 2005, Selma was accepted into ESMOD Berlin - International University of Art for Fashion, where she immediately started receiving awards and recognition from Berlin to China.
-
-      After living in New York for a number of years, Selma returned again to Sarajevo, this time to open her atelier and actively cultivate community around the arts, fashion, and commerce in her city of origin.
-
-      Most recently, Selma relocated to Los Angeles where she is exploring more spiritual influences in and through her work.
-
-      Selma Starfinger has designed pieces for three Eurovision Song Contests and performers, commercials for high end brands like Mercedes Benz and Hasselblad, and her work has been worn by countless models, including Rihanna, Omahyra Mota, and Coco Rocha.
-
   gallery:
     items:
       - info: Article from Refresh Your Life called Life in Constant Movement
@@ -169,20 +155,6 @@ params:
         gallery_dir: portfolio/notjustalabel
       - info: Some IG pics
         gallery_dir: portfolio/instagram
-
-  #Contact
-  contact:
-    enable: true
-    image: /images/20090109_0808_Selma.jpg
-    # title: "Custom Name"
-    content: If you'd like to collaborate, have a question, or just want to say hi, you can find me [@SelmaStarfinger](https://www.instagram.com/selmastarfinger/) on Instagram
-    email: sa@selmastarfinger.com
-    btnName: or Email me
-    # formspree:
-    #   enable: true # `contact.email` value will be ignored
-    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
-    #   emailCaption: "Enter your email address"
-    #   messageCaption: "Enter your message here"
 
   footer:
     socialNetworks:
