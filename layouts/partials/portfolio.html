@@ -17,7 +17,7 @@
         <div class="pr-lg-4">
 	  <article class="page-content  p-2">
             <!-- content in here -->
-            {{ range .Site.Params.gallery.items }}
+            {{ range (.Site.GetPage "portfolio.md").Params.items }}
               {{ if .info }}
                 <p class="image-gallery">
                 {{ .info | markdownify }}
