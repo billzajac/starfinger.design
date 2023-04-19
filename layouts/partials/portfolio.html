@@ -1,34 +1,32 @@
-<link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
-<!-- This section id="single" is what gives the rounded corners on the photos -->
-<style>
-    .image-gallery {overflow: auto; margin-left: -1%!important;}
-    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 32%;}
-    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
-    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
-    .image-gallery li a img {width: 100%; display: block;}
-    .image-gallery {font-family: "Alata", sans-serif; font-size: small; }
-    hr.image-gallery {border-top: 1px dashed;}
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+{{- $style := resources.Get "sass/lightbox.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script defer src="{{ .Site.Params.staticPath }}/lightbox.js"></script>
+
 <!-- the li float width will determine how many pics per row. I like 3 => 32% -->
 <section id="single" class="py-0 py-sm-5">
   <div id="gallery" class="container">
     <div class="row justify-content-center">
       <div class="col-sm-18 col-md-18 col-lg-15">
         <div class="pr-lg-4">
-	  <article class="page-content  p-2">
+          <article class="page-content  p-2">
+            <div lightbox-toggle>
             <!-- content in here -->
-            {{ range (.Site.GetPage "portfolio.md").Params.items }}
-              {{ if .info }}
+            {{- range (.Site.GetPage "portfolio.md").Params.items }}
+              {{- if .info -}}
                 <p class="image-gallery">
-                {{ .info | markdownify }}
+                {{- .info | markdownify -}}
                 </p>
                 <hr class="image-gallery">
-              {{end}}
-              {{ if .gallery_dir }}
-                {{ $dir := string .gallery_dir }}
-                {{- partial "image-gallery" (dict "context" . "gallery_dir" $dir) -}}
-              {{ end }}
-            {{ end }}
+              {{- end }}
+              {{- if .gallery_dir }}
+                {{- $dir := string .gallery_dir }}
+                {{- partial "image-gallery" (dict "context" . "gallery_dir" $dir) }}
+              {{- end }}
+            {{- end }}
+            </div>
           </article>
         </div>
       </div>
@@ -40,12 +38,12 @@
   </button>
 </section>
 
-{{ if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) }}
+{{- if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) -}}
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
-{{ end }}
+<script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
+{{- end }}
 
 <script>
   var topScroll = document.getElementById("topScroll");
