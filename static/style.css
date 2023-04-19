@@ -4,7 +4,31 @@
 .image-gallery div {float: left; display: block; margin: 0 0 1% 1%; width: 32%;}
 .image-gallery .thumb {text-align: center; text-decoration: none!important; color: #777;}
 .image-gallery .thumb img {width: 100%; display: block; border-radius: 1rem;}
-hr.image-gallery {border-top: 1px dashed;}
+.image-gallery {font-family: "Alata", sans-serif; font-size: small;}
+p.image-gallery {padding-top: 1rem; padding-bottom: 0.3rem; margin-bottom: 0.3rem;}
+hr.image-gallery {
+    background-color: #555;
+    border: none;
+    display: block;
+    height: 1px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+hr.image-gallery:before {
+    background-color: #555;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 50%;
+    z-index: 1;
+}
 
 /* Top scroll */
 #single #topScroll {
