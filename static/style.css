@@ -3,7 +3,15 @@
 .image-gallery {overflow: auto; margin-left: -1%!important;}
 .image-gallery div {float: left; display: block; margin: 0 0 1% 1%; width: 32%;}
 .image-gallery .thumb {text-align: center; text-decoration: none!important; color: #777;}
-.image-gallery .thumb img {width: 100%; display: block; border-radius: 1rem;}
+.image-gallery .thumb img {
+    width: 100%; 
+    display: block; 
+    border-radius: 1rem;
+}
+.image-gallery .thumb img:hover {
+    box-shadow: 0 0 11px rgb(15 80 100 / 20%);
+    filter: contrast(1.2);
+}
 .image-gallery {font-family: "Alata", sans-serif; font-size: small;}
 p.image-gallery {padding-top: 1rem; padding-bottom: 0.3rem; margin-bottom: 0.3rem;}
 hr.image-gallery {

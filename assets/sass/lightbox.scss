@@ -1,6 +1,6 @@
 /* Slider */
 [lightbox-toggle] {
-  cursor: zoom-in;
+  cursor: pointer;
 
   &:after {
     position: absolute;
@@ -104,7 +104,7 @@
     height: 75%;
     width: 75%;
     text-align: center;
-    cursor: zoom-in;
+    // cursor: zoom-in;
 
     img {
       width: auto;
