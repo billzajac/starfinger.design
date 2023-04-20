@@ -10,16 +10,6 @@ Hosting on cloudflare pages
 
 ## TODO
 
-### Add nice paging flipping to photos from gallery (lightbox or something)
-
-* Looking at
-    * https://github.com/bep/gallerydeluxe
-    * https://github.com/billzajac/hugo_gallerydeluxe_starter
-    * https://discourse.gohugo.io/t/new-google-photo-style-gallery-theme-module/40593
-
-* Just ended up using https://hugocodex.org/add-ons/image-gallery/ for now
-
-
 ### Add videos
 
 * 2018 Eurovision Song Contest
@@ -37,7 +27,6 @@ Hosting on cloudflare pages
     * https://player.vimeo.com/video/394777023
 * Berlin Fashion Week 2010
     * https://www.youtube.com/watch?v=a8Eq7hm7E14&t=106s
-
 
 #### To be categorized
 
