@@ -6,12 +6,14 @@ items:
     hair: Ensar Dervisbegovic
     makeup: Renata Ponjevic
     gallery_dir: portfolio/2021-kaftans
-  - photographer: Maja Topcagic
+  - title: Amazonke
+    photographer: Maja Topcagic
     model: Sarah Cerkez, Amina Sovsic, Ina Cano, Lejla Dzankovic
     hair: Eldin Nuhic
     makeup: Ina Cano
     gallery_dir: portfolio/2019-Maja-Topcagic
-  - photographer: Vanja Lisac
+  - title: All One
+    photographer: Vanja Lisac
     model: Maja Kujundzic
     gallery_dir: portfolio/vanja-maja
   - title: Refresh Your Life - Life in Constant Movement
@@ -26,10 +28,12 @@ items:
     photographer: Georgina Richardson
     model: Selma Starfinger
     gallery_dir: portfolio/tulum
-  - photographer: Selma Starfinger
+  - title: New York Welcomes Omahyra
+    photographer: Selma Starfinger
     model: Omahyra Moto Garcia
     gallery_dir: portfolio/omahrya
-  - photographer: Sinisha Nisevic
+  - title: She's a Genius
+    photographer: Sinisha Nisevic
     model: Coco Rocha
     gallery_dir: portfolio/coco
   - title: Birth of Starfinger
@@ -39,4 +43,8 @@ items:
   - title: Bonjour
     model: Martina Saira, Selma Starfinger
     gallery_dir: portfolio/2014-bonjour-Martina-Saira
+  - title: Daniel being Social
+    fit: 800x600 q99
+    model: Daniel Lombardi
+    gallery_dir: portfolio/daniel
 ---

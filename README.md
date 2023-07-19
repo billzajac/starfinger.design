@@ -8,6 +8,13 @@ Hosting on cloudflare pages
 	- HUGO_VERSION v0.111.3
 - https://github.com/aidenwallis/cloudflare-pages-badges (TODO)
 
+## Run
+
+```
+hugo --gc # to clear the cache
+hugo server -D # to test
+```
+
 ## Content details
 
 * https://docs.google.com/document/d/1RaWjF9hehq0kMicY2ZY5vE_IGzRWlITqE9-aoiIetHI

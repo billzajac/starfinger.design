@@ -1,5 +1,10 @@
 {{/* Set the var gallery_dir in your page to the dir you want */}}
 {{- $dir := string .gallery_dir -}}
+{{/* Set the var fit in your page to the resolution and quality you want */}}
+{{- $fit := "default" -}}
+{{- if .fit -}}
+{{- $fit = string .fit -}}
+{{- end -}}
 <div class="image-gallery">
 {{/*
   Sort assets/$gallery_dir descending and get only the image types I care about
@@ -12,7 +17,11 @@
   {{- $imagetitle := index (split .Name ".") 0 -}}
     <!-- High quality hence q99 -->
     <div class="thumb">
+      {{- if eq $fit "default" -}}
       <img src="{{ ($imageres.Fit "1600x1600 q99").Permalink }}">
+      {{- else -}}
+      <img src="{{ ($imageres.Fit $fit).Permalink }}">
+      {{- end -}}
     </div>
   {{ end }}
 {{- end -}}

@@ -45,7 +45,8 @@
               {{- if .gallery_dir }}
                 <hr class="image-gallery">
                 {{- $dir := string .gallery_dir }}
-                {{- partial "image-gallery" (dict "context" . "gallery_dir" $dir) }}
+                {{- $fit := string .fit }}
+                {{- partial "image-gallery" (dict "context" . "gallery_dir" $dir "fit" $fit) }}
               {{- end }}
             {{- end }}
             </div>
