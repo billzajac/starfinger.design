@@ -6,7 +6,7 @@
   Note image extension case is important due to my regex
   Using variable name $imageres because $image seemed to cause issues at times
 */}}
-  {{- range $index, $element := (sort (readDir (delimit (slice "assets" $dir) "/")) "Name" "desc") }}
+  {{- range $index, $element := (sort (readDir (delimit (slice "assets" $dir) "/")) "Name" "asc") }}
   {{- if (findRE ".jpg$|.jpeg$|.png$|.webp$" .Name) }}
   {{- $imageres := resources.Get (printf "%s/%s" $dir .Name) }}
   {{- $imagetitle := index (split .Name ".") 0 -}}

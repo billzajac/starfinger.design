@@ -15,13 +15,35 @@
             <div lightbox-toggle>
             <!-- content in here -->
             {{- range (.Site.GetPage "portfolio.md").Params.items }}
-              {{- if .info -}}
-                <p class="image-gallery">
-                {{- .info | markdownify -}}
+                <p class="image-gallery head">
+                {{- if .title -}}
+                  <p class="image-gallery title">
+                  {{- .title | markdownify -}}
+                  </p>
+                {{- end }}
+                {{- if .photographer -}}
+                  <p class="image-gallery credit">
+                  photographer: {{ .photographer | markdownify -}}
+                  </p>
+                {{- end }}
+                {{- if .model -}}
+                  <p class="image-gallery credit">
+                  model: {{ .model | markdownify -}}
+                  </p>
+                {{- end }}
+                {{- if .makeup -}}
+                  <p class="image-gallery credit">
+                  makeup: {{ .makeup | markdownify -}}
+                  </p>
+                {{- end }}
+                {{- if .hair -}}
+                  <p class="image-gallery credit">
+                  hair: {{ .hair | markdownify -}}
+                  </p>
+                {{- end }}
                 </p>
-                <hr class="image-gallery">
-              {{- end }}
               {{- if .gallery_dir }}
+                <hr class="image-gallery">
                 {{- $dir := string .gallery_dir }}
                 {{- partial "image-gallery" (dict "context" . "gallery_dir" $dir) }}
               {{- end }}

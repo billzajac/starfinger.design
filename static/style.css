@@ -12,8 +12,10 @@
     box-shadow: 0 0 11px rgb(15 80 100 / 20%);
     filter: contrast(1.2);
 }
-.image-gallery {font-family: "Alata", sans-serif; font-size: small;}
-p.image-gallery {padding-top: 1rem; padding-bottom: 0.3rem; margin-bottom: 0.3rem;}
+.image-gallery.credit {font-size: 0.7rem; text-indent: 1rem; color: #555; font-weight: 100;}
+p.image-gallery {padding-top: 0.01rem; padding-bottom: 0.01rem; margin-bottom: 0.01rem;}
+p.image-gallery.head {padding-top: 1rem; padding-bottom: 0.01rem; margin-bottom: 0.01rem;}
+p.image-gallery.title {font-size: medium; padding-top: 0.3rem; padding-bottom: 0.2rem; margin-bottom: 0.2rem;}
 hr.image-gallery {
     background-color: #555;
     border: none;
@@ -22,7 +24,7 @@ hr.image-gallery {
     overflow: visible;
     position: relative;
     width: 100%;
-    margin-top: 0.3rem;
+    margin-top: 0.01rem;
     margin-bottom: 0.3rem;
 }
 

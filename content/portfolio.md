@@ -1,23 +1,42 @@
 ---
 items:
-  - info: Colorful kaftans
+  - title: Ceremony
+    photographer: Haris Adžem
+    model: Maelys de Rudder
+    hair: Ensar Dervisbegovic
+    makeup: Renata Ponjevic
     gallery_dir: portfolio/2021-kaftans
-  - info: An amazing photographer named Maja Topcagic
+  - photographer: Maja Topcagic
+    model: Sarah Cerkez, Amina Sovsic, Ina Cano, Lejla Dzankovic
+    hair: Eldin Nuhic
+    makeup: Ina Cano
     gallery_dir: portfolio/2019-Maja-Topcagic
-  - info: "photographer: Vanja Lisac, model: Maja Kujundzic"
+  - photographer: Vanja Lisac
+    model: Maja Kujundzic
     gallery_dir: portfolio/vanja-maja
-  - info: Photots from Refresh Your Life called Life in Constant Movement
+  - title: Refresh Your Life - Life in Constant Movement
+    photographer: Vanja Lisac
+    model: Selma Starfinger
     gallery_dir: portfolio/2021-refresh-your-life-life-in-constant-movement
-  - info: Fashion. Beauty. Love
+  - title: Fashion. Beauty. Love
+    photographer: Vanja Lisac
+    model: Selma Starfinger
     gallery_dir: portfolio/2016-fashion-beauty-love
-  - info: Tulum
+  - title: Tulum
+    photographer: Georgina Richardson
+    model: Selma Starfinger
     gallery_dir: portfolio/tulum
-  - info: Omahyra Moto Garcia
+  - photographer: Selma Starfinger
+    model: Omahyra Moto Garcia
     gallery_dir: portfolio/omahrya
-  - info: Coco Rocha
+  - photographer: Sinisha Nisevic
+    model: Coco Rocha
     gallery_dir: portfolio/coco
-  - info: Martina Saira in Bonjour
+  - title: Birth of Starfinger
+    photographer: Stefan Kraul
+    model: Hejer Denguir
+    gallery_dir: portfolio/starfinger-award-winning-collection
+  - title: Bonjour
+    model: Martina Saira, Selma Starfinger
     gallery_dir: portfolio/2014-bonjour-Martina-Saira
-  - info: Some IG pics
-    gallery_dir: portfolio/instagram
 ---

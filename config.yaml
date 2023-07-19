@@ -110,7 +110,7 @@ params:
     intro: ""
     title: ""
     subtitle: "International Award-Winning Fashion Designer"
-    content: "Exploring the modern experience with a timeless twist, electrically combining both feminine and masculine elements in her designs."
+    content: "A modern experience with a timeless twist, electrically combining both feminine and masculine elements"
     image: /images/selma-headshot-white-suit.webp
     bottomImage:
       enable: true
