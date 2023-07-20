@@ -36,11 +36,11 @@ items:
     photographer: Vanja Lisac
     model: Selma Starfinger
     gallery_dir: portfolio/2016-fashion-beauty-love
-  - title: Tulum
+  - title: The Colors of Tulum
     photographer: Georgina Richardson
     model: Selma Starfinger
     gallery_dir: portfolio/tulum
-  - title: New York Welcomes Omahyra
+  - title: New York Welcomes
     photographer: Selma Starfinger
     model: Omahyra Moto Garcia
     gallery_dir: portfolio/omahrya
