@@ -129,8 +129,8 @@ params:
           url: https://www.etsy.com/shop/SelmaStarfinger
         - icon: fas fa-shopping-bag
           url: https://www.notjustalabel.com/selma-starfinger
-        - icon: fas fa-camera
-          url: https://kavyar.com/wf2tfsxnvj7d
+    #    - icon: fas fa-camera
+    #      url: https://kavyar.com/wf2tfsxnvj7d
     #    - icon: fab fa-twitter
     #      url: https://example.com
     #  customIcons:
