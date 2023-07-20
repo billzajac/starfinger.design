@@ -40,6 +40,12 @@ The file content/portfolio.md has the galleries and the assets need to be added 
 The portfolio is loaded from layouts/partials/portfolio.html
 There is also javascript magic to create the gallery and how it works
 
+<div style="padding:40% 0 0 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/{{ $id }}?h=1e51090569&amp;byline=0&amp;title=0&amp;badge=0&amp;autopause=0&amp;playsinline=0&amp;player_id=0&amp;app_id=122963" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" ></iframe>
+
+<div class="thumb">
+<iframe src="https://player.vimeo.com/video/{{ $id }}?byline=0&amp;title=0&amp;badge=0&amp;autopause=0&amp;playsinline=0&amp;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 ## TODO
 
 ### Add videos
