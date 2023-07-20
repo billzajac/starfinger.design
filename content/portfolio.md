@@ -1,5 +1,11 @@
 ---
 items:
+  - title: Zoom
+    photographer: Edvin Kalic
+    model: Ivona Bakovic
+    hair: Ensar Dervisbegovic
+    makeup: Renata Ponjevic
+    vimeo: 394775500 394777023 394773796 394788680 394781936 394786668 394787789
   - title: Ceremony
     photographer: Haris Adžem
     model: Maelys de Rudder
@@ -44,7 +50,6 @@ items:
     model: Martina Saira, Selma Starfinger
     gallery_dir: portfolio/2014-bonjour-Martina-Saira
   - title: Daniel being Social
-    fit: 800x600 q99
     model: Daniel Lombardi
     gallery_dir: portfolio/daniel
 ---

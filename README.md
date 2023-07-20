@@ -19,6 +19,27 @@ hugo server -D # to test
 
 * https://docs.google.com/document/d/1RaWjF9hehq0kMicY2ZY5vE_IGzRWlITqE9-aoiIetHI
 
+## Gallery magic
+
+Files
+
+* content/portfolio.md
+* layouts/partials/portfolio.html
+* layouts/partials/image-gallery.html
+* layouts/shortcodes/image-gallery.html (I'm not really using this one)
+* static/lightbox.js
+* assets/sass/lightbox.scss
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="http://localhost:1313/sass/lightbox.min.d3f575d2ceb8547c985c5477a3e15dd637985e0fe9663881e160030c4aa484dc.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script defer src="/lightbox.js"></script>
+
+
+The file content/portfolio.md has the galleries and the assets need to be added to /assets/portfolio
+The portfolio is loaded from layouts/partials/portfolio.html
+There is also javascript magic to create the gallery and how it works
+
 ## TODO
 
 ### Add videos
