@@ -6,6 +6,12 @@ items:
     hair: Ensar Dervisbegovic
     makeup: Renata Ponjevic
     vimeo: 394775500 394777023 394773796 394788680 394781936 394786668 394787789
+  - title: Afterlife
+    photographer: Dag Ulic
+    model: Lorae Russo
+    hair: Azra Hajdarevic
+    makeup: Azra Hajdarevic
+    gallery_dir: portfolio/2022-lorae
   - title: Ceremony
     photographer: Haris Adžem
     model: Maelys de Rudder
