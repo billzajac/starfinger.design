@@ -84,10 +84,10 @@ if (initLightbox) {
         initialSlide: index,
         autoHeight: true,
         centeredSlides: true,
-        centeredSlidesBounds: true,
-        loop: true,
+        centeredSlidesBounds: false,
+        loop: false,
         slidesPerView: 1,
-        spaceBetween: 16,
+        spaceBetween: 10,
         watchOverflow: true,
         navigation: {
           nextEl: '.swiper-button-next',
