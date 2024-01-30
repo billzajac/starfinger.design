@@ -81,12 +81,13 @@ if (initLightbox) {
 
       // Init Swiper
       swiper = new Swiper('.c-lightbox .swiper-container', {
-        initialSlide: index,
-        autoHeight: true,
+        //initialSlide: index,
+        //autoHeight: true,
         centeredSlides: true,
-        centeredSlidesBounds: false,
-        loop: false,
-        slidesPerView: 1,
+        //centeredSlidesBounds: true,
+        //loop: true,
+        //slidesPerView: 1,
+        slidesPerView: "auto",
         spaceBetween: 10,
         watchOverflow: true,
         navigation: {
