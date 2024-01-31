@@ -74,11 +74,9 @@
   }
 
   .swiper-slide {
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
-    object-fit: contain;
-    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .swiper-pagination {
@@ -109,8 +107,9 @@
     // cursor: zoom-in;
 
     img {
-      width: auto;
-      height: auto;
+      object-fit: contain;
+      width: 100vw!important;
+      height: auto!important;
       max-height: 95vh;
       max-width: 95vh;
     }
