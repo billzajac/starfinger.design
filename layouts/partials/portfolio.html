@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 {{- $style := resources.Get "sass/lightbox.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script defer src="{{ .Site.Params.staticPath }}/lightbox.js"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 
