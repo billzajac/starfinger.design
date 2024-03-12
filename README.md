@@ -21,7 +21,7 @@ hugo server -D # to test
 
 ## Gallery magic
 
-Files
+### Files
 
 * content/portfolio.md
 * layouts/partials/portfolio.html
