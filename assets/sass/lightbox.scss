@@ -4,7 +4,7 @@
 
   &:after {
     position: absolute;
-    content: url('data:image/svg+xml; utf8, ');
+    content: url("data:image/svg+xml; utf8, ");
     height: 32px;
     width: 32px;
     bottom: 0;
@@ -108,8 +108,8 @@
 
     img {
       object-fit: contain;
-      width: 100vw!important;
-      height: auto!important;
+      width: 100vw !important;
+      height: auto !important;
       max-height: 95vh;
       max-width: 95vh;
     }

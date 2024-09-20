@@ -22,7 +22,7 @@ items:
     url: "https://ryl.rs/moda-kao-sudbina/"
   - title: "Selma Starfinger: About fashion, young designers and women in the Balkans"
     source: "Elle Serbia"
-    image: "https://static.elle.rs/Pictures/950/1689/105808/jpeg/selma_stratfinger_intervju_577901437"
+    image: "/portfolio/other/selma_stratfinger_intervju_577901437.jpg"
     date: 2018-03-23
     url: "https://elle.rs/Stav/Intervju/a17476/Selma-Starfinger-O-modi-mladim-dizajnerima-i-zenama-na-Balkanu.html"
   - title: "Selma Berisalić: My models are worn by Rihanna, Fergie, Coco Rocha, Maëlys Tanović …"
