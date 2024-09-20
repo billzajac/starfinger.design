@@ -124,10 +124,12 @@ hr.image-gallery:before {
 .vimeo-video-wrapper {
   position: relative;
   margin: 0 auto 7px auto; /* Center the video and add spacing between them */
-  padding-bottom: 100%; /* Adjust aspect ratio */
-  height: 0;
+  width: 100%; /* Full width of its container */
+  padding-bottom: 130%;
   overflow: hidden; /* Ensures the iframe respects border-radius */
   border-radius: 1rem !important; /* Adds rounded corners */
+  height: 0; /* Let padding control the height */
+  max-height: 90vh !important; /* Restrict the video height to 90% of the viewport height */
 }
 
 .vimeo-video-wrapper iframe {
