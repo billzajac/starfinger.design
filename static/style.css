@@ -124,10 +124,24 @@ hr.image-gallery:before {
 .vimeo-video-wrapper {
   position: relative;
   margin: 0 auto 7px auto; /* Center the video and add spacing between them */
+  height: 90vh; /* Set height to 90% of the viewport height */
+  max-height: 90vh; /* Ensure the video doesn't exceed 90% of the viewport height */
+}
+
+/* Add a specific media query to handle mobile viewports */
+@media (max-width: 768px) {
+  .vimeo-video-wrapper {
+    height: auto; /* Allow videos to adjust to content height */
+    max-height: none; /* Remove max height on mobile to avoid big gaps */
+    padding-bottom: 130%; /* Add a bit more margin between videos on mobile */
+  }
+}
+
+.vimeo-video-wrapper-width-based-UNUSED {
+  position: relative;
+  margin: 0 auto 7px auto; /* Center the video and add spacing between them */
   width: 100%; /* Full width of its container */
   padding-bottom: 130%;
-  overflow: hidden; /* Ensures the iframe respects border-radius */
-  border-radius: 1rem !important; /* Adds rounded corners */
   height: 0; /* Let padding control the height */
   max-height: 90vh !important; /* Restrict the video height to 90% of the viewport height */
 }
