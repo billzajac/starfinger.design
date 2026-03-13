@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.92);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,14 +38,37 @@
     z-index: 999999;
     position: absolute;
     cursor: pointer;
-    top: 1vh;
-    right: 1vw;
-    font-size: 30px;
-    padding: 20px;
-    color: #b0b3b8;
+    top: 12px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    padding: 16px;
+    background: none;
+    border: none;
 
-    &:hover {
-      color: #212529;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px;
+      height: 1.5px;
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: background-color 0.2s;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: rgba(255, 255, 255, 0.9);
     }
   }
 
@@ -61,19 +84,20 @@
   }
 
   .swiper-pagination {
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: #b0b3b8;
+    color: rgba(255, 255, 255, 0.35);
+    transition: color 0.2s;
 
     &:hover {
-      color: #212529;
+      color: rgba(255, 255, 255, 0.8);
     }
 
     &:after {
-      font-size: 30px;
+      font-size: 24px;
     }
   }
 

@@ -36,7 +36,7 @@ const createLightboxSkeleton = () => {
   lightboxClose.classList.add('c-lightbox__close');
   lightboxClose.setAttribute('tabindex', '0');
   lightboxClose.setAttribute('aria-label', 'Close lightbox');
-  lightboxClose.innerHTML = '&#10005;';
+  lightboxClose.innerHTML = '';
   swiperContainer.classList.add('swiper');
   swiperWrapper.classList.add('swiper-wrapper');
   swiperBtnNext.classList.add('swiper-button-next');
