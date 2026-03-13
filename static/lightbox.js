@@ -36,7 +36,7 @@ const createLightboxSkeleton = () => {
   lightboxClose.classList.add('c-lightbox__close');
   lightboxClose.setAttribute('tabindex', '0');
   lightboxClose.setAttribute('aria-label', 'Close lightbox');
-  lightboxClose.innerHTML = '';
+  lightboxClose.innerHTML = '×';
   swiperContainer.classList.add('swiper');
   swiperWrapper.classList.add('swiper-wrapper');
   swiperBtnNext.classList.add('swiper-button-next');
@@ -74,11 +74,11 @@ if (initLightbox) {
           const image = img.cloneNode(true);
           image.removeAttribute('loading');
           const slide = document.createElement('div');
-          const imageContainer = document.createElement('div');
+          const zoomContainer = document.createElement('div');
           slide.classList.add('swiper-slide');
-          imageContainer.classList.add('c-lightbox__image');
-          imageContainer.appendChild(image);
-          slide.appendChild(imageContainer);
+          zoomContainer.classList.add('swiper-zoom-container', 'c-lightbox__image');
+          zoomContainer.appendChild(image);
+          slide.appendChild(zoomContainer);
           globals.swiperWrapperRef.appendChild(slide);
         });
 
@@ -94,7 +94,10 @@ if (initLightbox) {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
-          zoom: true,
+          zoom: {
+            maxRatio: 3,
+            toggle: true,
+          },
           keyboard: {
             enabled: true,
             onlyInViewport: true,
@@ -114,9 +117,11 @@ if (initLightbox) {
     });
   });
 
-  // Close lightbox on close button click or background click
+  // Close lightbox when clicking outside the image
   document.addEventListener('click', ({ target }) => {
-    if (target.matches('.c-lightbox__close') || target.matches('.c-lightbox')) {
+    if (target.matches('.c-lightbox__close')) {
+      closeLightbox();
+    } else if (target.closest('.c-lightbox') && !target.closest('.c-lightbox__image') && !target.closest('.swiper-button-next') && !target.closest('.swiper-button-prev')) {
       closeLightbox();
     }
   }, false);

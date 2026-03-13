@@ -17,11 +17,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   transition: opacity 0.3s;
 
   &.open {
@@ -32,72 +35,66 @@
   #{$c}__container {
     width: 100%;
     height: 100%;
+    background-color: transparent !important;
   }
 
   #{$c}__close {
-    z-index: 999999;
     position: absolute;
-    cursor: pointer;
     top: 12px;
     right: 16px;
-    width: 32px;
-    height: 32px;
-    padding: 16px;
-    background: none;
-    border: none;
+    z-index: 10;
+    font-size: 36px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent !important;
+    transition: color 0.2s, background-color 0.2s;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 24px;
-      height: 1.5px;
-      background-color: rgba(255, 255, 255, 0.5);
-      transition: background-color 0.2s;
-    }
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    &::after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-
-    &:hover::before,
-    &:hover::after {
-      background-color: rgba(255, 255, 255, 0.9);
+    &:hover {
+      color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.08) !important;
     }
   }
 
   .swiper {
     width: 100%;
     height: 100%;
+    cursor: default;
+    background-color: transparent !important;
+  }
+
+  .swiper-wrapper {
+    background-color: transparent !important;
   }
 
   .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent !important;
   }
 
   .swiper-pagination {
-    color: rgba(255, 255, 255, 0.5);
+    display: none;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: rgba(255, 255, 255, 0.35);
+    color: rgba(0, 0, 0, 0.2);
     transition: color 0.2s;
 
     &:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(0, 0, 0, 0.5);
     }
 
     &:after {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
@@ -105,17 +102,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    height: 75%;
-    width: 75%;
-    text-align: center;
+    cursor: default;
 
     img {
       object-fit: contain;
-      width: 100vw !important;
+      max-height: 92vh;
+      max-width: 92vw;
+      width: auto !important;
       height: auto !important;
-      max-height: 95vh;
-      max-width: 95vh;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
     }
   }
 }

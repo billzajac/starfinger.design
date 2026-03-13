@@ -114,7 +114,7 @@ params:
     content: "A modern experience with a timeless twist, electrically combining both feminine and masculine elements"
     image: /images/selma-headshot-white-suit.webp
     bottomImage:
-      enable: true
+      enable: false
     # roundImage: true # Make hero image circular | default false
     button:
       enable: false
