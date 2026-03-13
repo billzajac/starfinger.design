@@ -1,25 +1,6 @@
 /* Slider */
 [lightbox-toggle] {
   cursor: pointer;
-
-  &:after {
-    position: absolute;
-    content: url("data:image/svg+xml; utf8, ");
-    height: 32px;
-    width: 32px;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    will-change: opacity;
-    transition: opacity 0.2s;
-  }
-
-  &:hover {
-    &:after {
-      opacity: 1;
-      filter: drop-shadow(2px 4px 6px black);
-    }
-  }
 }
 
 .c-lightbox {
@@ -68,7 +49,7 @@
     }
   }
 
-  .swiper-container {
+  .swiper {
     width: 100%;
     height: 100%;
   }
@@ -104,7 +85,6 @@
     height: 75%;
     width: 75%;
     text-align: center;
-    // cursor: zoom-in;
 
     img {
       object-fit: contain;

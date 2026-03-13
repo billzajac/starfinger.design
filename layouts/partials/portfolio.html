@@ -1,97 +1,71 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-{{- $style := resources.Get "sass/lightbox.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.css"/>
+{{- $style := resources.Get "sass/lightbox.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.js"></script>
 <script defer src="{{ .Site.Params.staticPath }}/lightbox.js"></script>
-<script src="https://player.vimeo.com/api/player.js"></script>
 
-<!-- the li float width will determine how many pics per row. I like 3 => 32% -->
 <section id="single" class="py-0 py-sm-5">
   <div id="gallery" class="container">
     <div class="row justify-content-center">
       <div class="col-sm-18 col-md-18 col-lg-15">
         <div class="pr-lg-4">
           <article class="page-content p-2">
-            <div lightbox-toggle>
-            <!-- Loop through the items in portfolio.md -->
-            {{- range (.Site.GetPage "portfolio.md").Params.items }}
-                <p class="image-gallery head">
+            {{- with .Site.GetPage "portfolio.md" }}
+            {{- range .Params.items }}
+                <div class="image-gallery-header">
                 {{- if .title -}}
-                  <p class="image-gallery title">{{ .title | markdownify }}</p>
+                  <div class="image-gallery title">{{ .title | markdownify }}</div>
                 {{- end }}
                 {{- if .photographer -}}
-                  <p class="image-gallery credit">photographer: {{ .photographer | markdownify }}</p>
+                  <div class="image-gallery credit">photographer: {{ .photographer | markdownify }}</div>
                 {{- end }}
                 {{- if .model -}}
-                  <p class="image-gallery credit">model: {{ .model | markdownify }}</p>
+                  <div class="image-gallery credit">model: {{ .model | markdownify }}</div>
                 {{- end }}
                 {{- if .makeup -}}
-                  <p class="image-gallery credit">makeup: {{ .makeup | markdownify }}</p>
+                  <div class="image-gallery credit">makeup: {{ .makeup | markdownify }}</div>
                 {{- end }}
                 {{- if .hair -}}
-                  <p class="image-gallery credit">hair: {{ .hair | markdownify }}</p>
+                  <div class="image-gallery credit">hair: {{ .hair | markdownify }}</div>
                 {{- end }}
-                </p>
+                </div>
 
               {{- if .vimeo }}
                 <hr class="image-gallery">
                 <div class="vimeo-video-group">
-                  {{/* Loop through each Vimeo ID in the space-separated list */}}
                   {{- $vimeo := string .vimeo -}}
                   {{- range $id := split $vimeo " " }}
                     <div class="vimeo-video-wrapper">
-                      <iframe src="https://player.vimeo.com/video/{{ $id }}?byline=0&amp;title=0&amp;badge=0&amp;autopause=0&amp;playsinline=1" 
-                              frameborder="0" 
-                              webkitallowfullscreen 
-                              mozallowfullscreen 
-                              allow="fullscreen">
+                      <iframe src="https://player.vimeo.com/video/{{ $id }}?byline=0&amp;title=0&amp;badge=0&amp;autopause=0&amp;playsinline=1"
+                              frameborder="0"
+                              allow="fullscreen"
+                              loading="lazy">
                       </iframe>
                     </div>
                   {{ end }}
                 </div>
               {{- end }}
-              
+
               {{- if .gallery_dir }}
                 <hr class="image-gallery">
+                <div lightbox-toggle>
                 {{- $dir := string .gallery_dir }}
                 {{- $fit := string .fit }}
                 {{- partial "image-gallery" (dict "context" . "gallery_dir" $dir "fit" $fit) }}
+                </div>
               {{- end }}
             {{- end }}
-            </div>
+            {{- end }}
           </article>
         </div>
       </div>
     </div>
   </div>
 
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll" aria-label="Scroll to top">
     <i class="fas fa-angle-up"></i>
   </button>
 </section>
 
-{{- if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) -}}
-<div class="progress">
-  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
-{{- end }}
-
-<script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      topScroll.style.display = "block";
-    } else {
-      topScroll.style.display = "none";
-    }
-  }
-
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-</script>
+<script src="{{ .Site.Params.staticPath }}/js/scroll-to-top.js"></script>

@@ -13,7 +13,8 @@ outputs:
     - "HTML"
     - "RSS"
 
-Paginate: 3
+pagination:
+  pagerSize: 3
 enableRobotsTXT: true
 # disqusShortname: your-disqus-shortname
 googleAnalytics: G-MGWB4RL908
@@ -21,7 +22,7 @@ googleAnalytics: G-MGWB4RL908
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: false
 
 Menus:
   main:
@@ -157,7 +158,7 @@ params:
       enable: false
       content: "min read"
     scrollprogress:
-      enable: true
+      enable: false
 
   # For translations
   terms:
