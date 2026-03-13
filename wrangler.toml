@@ -1,7 +1,0 @@
-# Cloudflare Pages build configuration
-name = "starfinger-design"
-pages_build_output_dir = "public"
-
-[vars]
-HUGO_VERSION = "0.157.0"
-NODE_VERSION = "20"
