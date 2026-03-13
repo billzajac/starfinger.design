@@ -6,7 +6,7 @@ toc: false
 socialShare: false
 image: /images/20090109_0808_Selma.jpg
 content: If you'd like to collaborate, have a question, or just want to say hi, you can find me [@SelmaStarfinger](https://www.instagram.com/selmastarfinger/) on Instagram
-email: sa@selmastarfinger.com
+email: selma@1111.berlin
 btnName: or Email me
 ---
 
