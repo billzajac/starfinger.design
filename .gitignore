@@ -1,4 +1,6 @@
+# macOS
 .DS_Store
+._*
 
 ### Hugo ###
 # Generated files by hugo
