@@ -71,8 +71,12 @@ if (initLightbox) {
 
         // Only add images from this collection
         groupImages.forEach((img) => {
-          const image = img.cloneNode(true);
-          image.removeAttribute('loading');
+          // Grid uses small srcset images; the lightbox loads the full-size file.
+          const image = document.createElement('img');
+          image.src = img.dataset.full || img.currentSrc || img.src;
+          image.alt = img.alt;
+          image.decoding = 'async';
+          image.loading = 'lazy'; // off-screen slides load only when swiped near
           const slide = document.createElement('div');
           const zoomContainer = document.createElement('div');
           slide.classList.add('swiper-slide');

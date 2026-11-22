@@ -1,0 +1,16 @@
+{{- /*
+  Inline a Font Awesome 6 SVG from the theme, instead of loading the 1.5 MB all.js.
+  Usage: {{ partial "fa-icon" "fab fa-instagram" }}
+*/ -}}
+{{- $dirs := dict "fab" "brands" "fas" "solid" "far" "regular" -}}
+{{- $aliases := dict "shopping-bag" "bag-shopping" -}}
+{{- $parts := split (trim . " ") " " -}}
+{{- $dir := index $dirs (index $parts 0) | default "solid" -}}
+{{- $name := strings.TrimPrefix "fa-" (index $parts 1) -}}
+{{- $name = index $aliases $name | default $name -}}
+{{- $path := printf "themes/hugo-profile/static/fontawesome-6/svgs/%s/%s.svg" $dir $name -}}
+{{- if fileExists $path -}}
+{{- replace (readFile $path) "<svg " "<svg class=\"svg-inline--fa\" aria-hidden=\"true\" focusable=\"false\" fill=\"currentColor\" " | safeHTML -}}
+{{- else -}}
+{{- errorf "fa-icon: no SVG for %q at %s" . $path -}}
+{{- end -}}

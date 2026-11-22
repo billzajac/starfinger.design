@@ -1,21 +1,35 @@
 {{- $dir := string .gallery_dir -}}
-{{- $fit := "default" -}}
-{{- if .fit -}}
+{{- $title := "" -}}
+{{- with .context }}{{ with .title }}{{ $title = . | plainify }}{{ end }}{{ end -}}
+{{- $fit := "1600x1600" -}}
+{{- if and .fit (ne (string .fit) "default") (ne (string .fit) "") -}}
 {{- $fit = string .fit -}}
 {{- end -}}
+{{- /* Grid: 1 column on phones, 2 on tablets, 3 on desktop (see static/style.css). */ -}}
+{{- $sizes := "(max-width: 576px) 96vw, (max-width: 768px) 46vw, 30vw" -}}
 <div class="image-gallery">
-  {{- range $index, $element := (sort (readDir (delimit (slice "assets" $dir) "/")) "Name" "asc") }}
+  {{- $n := 0 }}
+  {{- range sort (readDir (delimit (slice "assets" $dir) "/")) "Name" "asc" }}
   {{- if and (not (hasPrefix .Name "._")) (findRE "\\.(jpg|jpeg|png|webp)$" .Name) }}
   {{- with resources.Get (printf "%s/%s" $dir .Name) }}
-  {{- $imagetitle := index (split $element.Name ".") 0 -}}
+  {{- $img := . }}
+  {{- $n = add $n 1 }}
+  {{- $full := $img.Fit (printf "%s q85" $fit) }}
+  {{- $srcset := slice }}
+  {{- range slice 480 800 1200 }}
+  {{- if le . $img.Width }}
+  {{- $srcset = $srcset | append (printf "%s %dw" ($img.Resize (printf "%dx webp q80" .)).RelPermalink .) }}
+  {{- end }}
+  {{- end }}
+  {{- $small := $img.Resize (printf "%dx webp q80" (cond (lt $img.Width 800) $img.Width 800)) }}
     <div class="thumb">
-      {{- if eq $fit "default" -}}
-      <img src="{{ (.Fit "1600x1600 q99").Permalink }}" alt="{{ $imagetitle }}" loading="lazy">
-      {{- else -}}
-      <img src="{{ (.Fit $fit).Permalink }}" alt="{{ $imagetitle }}" loading="lazy">
-      {{- end -}}
+      <img src="{{ $small.RelPermalink }}"
+           {{- with $srcset }} srcset="{{ delimit . ", " }}" sizes="{{ $sizes }}"{{ end }}
+           width="{{ $small.Width }}" height="{{ $small.Height }}"
+           data-full="{{ $full.RelPermalink }}"
+           alt="{{ with $title }}{{ . }} – {{ end }}image {{ $n }}" loading="lazy" decoding="async">
     </div>
   {{- end }}
-  {{ end }}
-{{- end -}}
+  {{- end }}
+  {{- end }}
 </div>

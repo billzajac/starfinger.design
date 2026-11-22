@@ -1,0 +1,8 @@
+# Cloudflare Pages headers.
+# Hugo-processed images have a content hash in the file name (_hu_...), so they never change.
+/portfolio/*
+  Cache-Control: public, max-age=31536000, immutable
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/video-posters/*
+  Cache-Control: public, max-age=31536000, immutable

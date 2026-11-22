@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.css"/>
-{{- $style := resources.Get "sass/lightbox.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{- $style := resources.Get "css/lightbox.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.js"></script>
 <script defer src="{{ .Site.Params.staticPath }}/lightbox.js"></script>
 
 <section id="single" class="py-0 py-sm-5">
@@ -36,12 +36,19 @@
                 <div class="vimeo-video-group">
                   {{- $vimeo := string .vimeo -}}
                   {{- range $id := split $vimeo " " }}
+                    {{- /* Poster + play button; the Vimeo player (~500 KB) loads only on tap. Posters: assets/video-posters/<id>.jpg */}}
                     <div class="vimeo-video-wrapper">
-                      <iframe src="https://player.vimeo.com/video/{{ $id }}?byline=0&amp;title=0&amp;badge=0&amp;autopause=0&amp;playsinline=1"
-                              frameborder="0"
-                              allow="fullscreen"
-                              loading="lazy">
-                      </iframe>
+                      <button type="button" class="vimeo-facade" data-vimeo-id="{{ $id }}" aria-label="Play video">
+                        {{- with resources.Get (printf "video-posters/%s.jpg" $id) }}
+                        {{- $p480 := .Resize "480x webp q75" }}{{ $p800 := .Resize "800x webp q75" }}
+                        <img src="{{ $p800.RelPermalink }}"
+                             srcset="{{ $p480.RelPermalink }} 480w, {{ $p800.RelPermalink }} 800w"
+                             sizes="(max-width: 768px) 96vw, 46vw"
+                             width="{{ $p800.Width }}" height="{{ $p800.Height }}"
+                             alt="" loading="lazy" decoding="async">
+                        {{- end }}
+                        <span class="vimeo-facade__play" aria-hidden="true">{{ partial "fa-icon" "fas fa-play" }}</span>
+                      </button>
                     </div>
                   {{ end }}
                 </div>
@@ -64,8 +71,9 @@
   </div>
 
   <button class="p-2 px-3" onclick="topFunction()" id="topScroll" aria-label="Scroll to top">
-    <i class="fas fa-angle-up"></i>
+    {{ partial "fa-icon" "fas fa-angle-up" }}
   </button>
 </section>
 
 <script src="{{ .Site.Params.staticPath }}/js/scroll-to-top.js"></script>
+<script defer src="{{ .Site.Params.staticPath }}/js/vimeo-facade.js"></script>

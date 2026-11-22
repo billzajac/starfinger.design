@@ -1,0 +1,13 @@
+<span>
+    {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
+    <span class="px-1">
+        <a href="{{ .url }}"
+            {{ if not (hasPrefix .url "#") }} target="_blank" rel="noopener"{{ end }}
+            {{ with .label }} aria-label="{{ . }}" title="{{ . }}"{{ end }}
+            class="btn social-icon"
+        >
+            {{ partial "fa-icon" .icon }}
+        </a>
+    </span>
+    {{ end }}
+</span>

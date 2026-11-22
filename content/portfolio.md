@@ -26,7 +26,7 @@ items:
     gallery_dir: portfolio/2019-Maja-Topcagic
   - title: All One
     photographer: Vanja Lisac
-    model: Maja Kujundzic
+    model: Maja Kujundzic, PhD
     gallery_dir: portfolio/vanja-maja
   - title: Refresh Your Life - Life in Constant Movement
     photographer: Vanja Lisac

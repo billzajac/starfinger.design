@@ -1,5 +1,5 @@
 baseURL: "https://starfinger.design"
-languageCode: "en-us"
+locale: "en-US"
 title: "Selma Starfinger"
 theme: hugo-profile
 #timeout: 600000
@@ -46,6 +46,11 @@ Menus:
       title: Contact
       url: /contact
       weight: 4
+    - identifier: shop
+      name: Shop 1111 BERLIN
+      title: Selma's brand, 1111 BERLIN
+      url: "https://1111.berlin/?ref=starfinger.design"
+      weight: 5
 
 params:
   title: "Selma Starfinger"
@@ -112,25 +117,26 @@ params:
     title: ""
     subtitle: "International Award-Winning Fashion Designer"
     content: "A modern experience with a timeless twist, electrically combining both feminine and masculine elements"
-    image: /images/selma-headshot-white-suit.webp
+    image: /images/Selma-2026.jpg
     bottomImage:
       enable: false
     # roundImage: true # Make hero image circular | default false
     button:
-      enable: false
-      name: "Resume"
-      url: "#"
-      download: true
-      newPage: false
+      enable: true
+      name: "Shop 1111 BERLIN"
+      url: "https://1111.berlin/?ref=starfinger.design"
+      download: false
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-instagram
+          label: Instagram
           url: https://www.instagram.com/selmastarfinger/
-        - icon: fab fa-etsy
-          url: https://www.etsy.com/shop/SelmaStarfinger
         - icon: fas fa-shopping-bag
-          url: https://1111.berlin
+          label: 1111 BERLIN shop
+          url: "https://1111.berlin/?ref=starfinger.design"
         - icon: fab fa-linkedin-in
+          label: LinkedIn
           url: https://www.linkedin.com/in/selma-starfinger/
     #    - icon: fas fa-camera
     #      url: https://kavyar.com/wf2tfsxnvj7d

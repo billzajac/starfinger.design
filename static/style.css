@@ -1,5 +1,5 @@
 /* Image Gallery */
-/* Also see: assets/sass/lightbox.scss */
+/* Also see: assets/css/lightbox.css */
 .image-gallery {
   overflow: auto;
   margin-left: -1% !important;
@@ -17,6 +17,7 @@
 }
 .image-gallery .thumb img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 2px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -191,4 +192,59 @@ hr.image-gallery {
   section#gallery {
     padding-top: 1rem;
   }
+}
+
+/* Inline Font Awesome SVGs (layouts/partials/fa-icon.html) */
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+/* The site font draws "1" like "I", so "1111" reads as "IIII".
+   Use the system font (as 1111.berlin does) for links to the brand site. */
+a[href*="1111.berlin"] {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Vimeo poster button (static/js/vimeo-facade.js) */
+.vimeo-facade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: #111;
+  cursor: pointer;
+}
+.vimeo-facade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.vimeo-facade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  font-size: 22px;
+  padding-left: 4px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+.vimeo-facade:hover .vimeo-facade__play,
+.vimeo-facade:focus-visible .vimeo-facade__play {
+  transform: scale(1.08);
+  background: #fff;
 }
