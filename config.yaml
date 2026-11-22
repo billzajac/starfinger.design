@@ -47,10 +47,12 @@ Menus:
       url: /contact
       weight: 4
     - identifier: shop
-      name: Shop 1111 BERLIN
+      name: Shop
       title: Selma's brand, 1111 BERLIN
       url: "https://1111.berlin/?ref=starfinger.design"
       weight: 5
+      params:
+        brandLogo: true
 
 params:
   title: "Selma Starfinger"
@@ -123,7 +125,8 @@ params:
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
-      name: "Shop 1111 BERLIN"
+      name: "Shop"
+      brandLogo: true # renders the 1111 BERLIN logo after the name
       url: "https://1111.berlin/?ref=starfinger.design"
       download: false
       newPage: true
@@ -132,9 +135,9 @@ params:
         - icon: fab fa-instagram
           label: Instagram
           url: https://www.instagram.com/selmastarfinger/
-        - icon: fas fa-shopping-bag
-          label: 1111 BERLIN shop
-          url: "https://1111.berlin/?ref=starfinger.design"
+        - icon: fab fa-tiktok
+          label: TikTok
+          url: https://www.tiktok.com/@1111berlin
         - icon: fab fa-linkedin-in
           label: LinkedIn
           url: https://www.linkedin.com/in/selma-starfinger/

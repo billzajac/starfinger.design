@@ -1,0 +1,8 @@
+{{- /*
+  One-line 1111 BERLIN logo, inline so it takes the link color.
+  assets/brand/1111-berlin-inline.svg is traced from the 1111.berlin logo fonts
+  (DS-Digital Bold for "1111", Couture Bold for "BERLIN").
+*/ -}}
+{{- with resources.Get "brand/1111-berlin-inline.svg" -}}
+{{- replace .Content "<svg " "<svg class=\"brand-1111\" height=\"0.75em\" focusable=\"false\" fill=\"currentColor\" " | safeHTML -}}
+{{- end -}}

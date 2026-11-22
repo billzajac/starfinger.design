@@ -31,8 +31,9 @@ hugo                    # Build to /public/
 ## Key Details
 - Theme toggle disabled; light mode only
 - Google Analytics: G-MGWB4RL908
-- Social links: Instagram, 1111 BERLIN (Selma's brand, replaces Etsy), LinkedIn
+- Social links: Instagram, TikTok (@1111berlin), LinkedIn; 1111 BERLIN (replaces Etsy) is the hero button and menu item
 - Links to https://1111.berlin carry `?ref=starfinger.design`
+- "Shop" links show the 1111 BERLIN logo (`layouts/partials/brand-1111.html`, set `brandLogo: true` on the menu item or hero button). `assets/brand/1111-berlin-inline.svg` is traced from the fonts in `~/code/1111.berlin/public/fonts/` (DS-Digital Bold, Couture Bold)
 - Images are processed by Hugo's image pipeline (resources/_gen/)
 - Goldmark renderer is `unsafe: false` (raw HTML in markdown is not rendered)
 - Custom lightbox implementation (`assets/js/lightbox.js`, `assets/css/lightbox.css`)

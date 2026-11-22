@@ -23,6 +23,7 @@
                           target="_blank"
                           {{ end }}>
                             {{ .Site.Params.hero.button.name }}
+                            {{- if .Site.Params.hero.button.brandLogo }} {{ partial "brand-1111" . }}{{ end }}
                         </a>
                         {{ end }}
                     </div>

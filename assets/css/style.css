@@ -202,11 +202,13 @@ hr.image-gallery {
   vertical-align: -0.125em;
 }
 
-/* The site font draws "1" like "I", so "1111" reads as "IIII".
-   Use the system font (as 1111.berlin does) for links to the brand site. */
-a[href*="1111.berlin"] {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  letter-spacing: 0.04em;
+/* 1111 BERLIN logo after "Shop" (layouts/partials/brand-1111.html) */
+.brand-1111 {
+  display: inline-block;
+  height: 0.75em;
+  width: auto;
+  margin-left: 0.2em;
+  vertical-align: baseline;
 }
 
 /* Vimeo poster button (static/js/vimeo-facade.js) */
