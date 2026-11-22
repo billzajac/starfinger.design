@@ -33,7 +33,7 @@ hugo                    # Build to /public/
 - Google Analytics: G-MGWB4RL908
 - Social links: Instagram, TikTok (@1111berlin), LinkedIn; 1111 BERLIN (replaces Etsy) is the hero button and menu item
 - Links to https://1111.berlin carry `?ref=starfinger.design`
-- "Shop" links show the 1111 BERLIN logo (`layouts/partials/brand-1111.html`, set `brandLogo: true` on the menu item or hero button). `assets/brand/1111-berlin-inline.svg` reuses the paths of `~/code/1111.berlin/public/logo-wide.svg`, set on one line
+- "Shop" links show the stacked 1111 BERLIN logo (`layouts/partials/brand-1111.html`, set `brandLogo: true` on the menu item or hero button). `assets/brand/1111-berlin-logo.svg` is a copy of `~/code/1111.berlin/public/logo-wide.svg`; update it when that logo changes
 - Images are processed by Hugo's image pipeline (resources/_gen/)
 - Goldmark renderer is `unsafe: false` (raw HTML in markdown is not rendered)
 - Custom lightbox implementation (`assets/js/lightbox.js`, `assets/css/lightbox.css`)

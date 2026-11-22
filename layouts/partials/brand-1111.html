@@ -1,9 +1,9 @@
 {{- /*
-  One-line 1111 BERLIN logo, inline so it takes the link color.
-  assets/brand/1111-berlin-inline.svg reuses the exact "1111" and "BERLIN" paths of
-  ~/code/1111.berlin/public/logo-wide.svg, set side by side: BERLIN cap height = 0.7 x the
-  digit height, both on one baseline, so BERLIN matches the cap height of the link text.
+  The 1111 BERLIN logo ("1111" stacked above "BERLIN"), inline so it takes the link color.
+  assets/brand/1111-berlin-logo.svg is a copy of ~/code/1111.berlin/public/logo-wide.svg.
+  The link that contains it gets class "has-brand-logo" (see assets/css/style.css).
 */ -}}
-{{- with resources.Get "brand/1111-berlin-inline.svg" -}}
-{{- replace .Content "<svg " "<svg class=\"brand-1111\" height=\"1em\" focusable=\"false\" fill=\"currentColor\" " | safeHTML -}}
+{{- with resources.Get "brand/1111-berlin-logo.svg" -}}
+{{- $svg := replaceRE `<!--.*?-->\s*` "" .Content -}}
+{{- replace $svg "<svg " "<svg class=\"brand-1111\" height=\"2.2em\" focusable=\"false\" " | safeHTML -}}
 {{- end -}}

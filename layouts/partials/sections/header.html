@@ -60,7 +60,7 @@
                     {{else}}
                     <!-- Single menu item -->
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{.URL}}" title="{{ .Title }}">
+                        <a class="nav-link{{ if .Params.brandLogo }} has-brand-logo{{ end }}" href="{{.URL}}" title="{{ .Title }}">
                             {{ .Pre }}
                             {{ .Name }}
                             {{- if .Params.brandLogo }} {{ partial "brand-1111" . }}{{ end }}

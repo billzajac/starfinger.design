@@ -206,13 +206,35 @@ hr.image-gallery {
   vertical-align: -0.125em;
 }
 
-/* 1111 BERLIN logo after "Shop" (layouts/partials/brand-1111.html) */
+/* "Shop" + stacked 1111 BERLIN logo (layouts/partials/brand-1111.html) */
+.has-brand-logo {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+}
+#hero .btn.has-brand-logo {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
 .brand-1111 {
-  display: inline-block;
-  height: 1em;
+  display: block;
+  height: 2.2em;
   width: auto;
-  margin-left: 0.35em;
-  vertical-align: baseline; /* SVG bottom = text baseline; BERLIN sits on it */
+  flex: none;
+}
+/* Navbar: smaller logo, no extra padding, so the bar keeps its height */
+.navbar-nav {
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .nav-link.has-brand-logo {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+.nav-link.has-brand-logo .brand-1111 {
+  height: 1.9em;
 }
 
 /* Vimeo poster button (static/js/vimeo-facade.js) */
