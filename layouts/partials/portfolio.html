@@ -18,16 +18,16 @@
                   <div class="image-gallery title">{{ .title | markdownify }}</div>
                 {{- end }}
                 {{- if .photographer -}}
-                  <div class="image-gallery credit">photographer: {{ .photographer | markdownify }}</div>
+                  <div class="image-gallery credit">photographer: {{ .photographer | markdownify | replaceRE `\bPhD\b` `<span class="keep-case">PhD</span>` | safeHTML }}</div>
                 {{- end }}
                 {{- if .model -}}
-                  <div class="image-gallery credit">model: {{ .model | markdownify }}</div>
+                  <div class="image-gallery credit">model: {{ .model | markdownify | replaceRE `\bPhD\b` `<span class="keep-case">PhD</span>` | safeHTML }}</div>
                 {{- end }}
                 {{- if .makeup -}}
-                  <div class="image-gallery credit">makeup: {{ .makeup | markdownify }}</div>
+                  <div class="image-gallery credit">makeup: {{ .makeup | markdownify | replaceRE `\bPhD\b` `<span class="keep-case">PhD</span>` | safeHTML }}</div>
                 {{- end }}
                 {{- if .hair -}}
-                  <div class="image-gallery credit">hair: {{ .hair | markdownify }}</div>
+                  <div class="image-gallery credit">hair: {{ .hair | markdownify | replaceRE `\bPhD\b` `<span class="keep-case">PhD</span>` | safeHTML }}</div>
                 {{- end }}
                 </div>
 

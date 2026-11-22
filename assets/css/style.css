@@ -53,6 +53,10 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+/* Credits are uppercase; keep the case of degrees such as "PhD" (layouts/partials/portfolio.html) */
+.image-gallery.credit .keep-case {
+  text-transform: none;
+}
 div.image-gallery {
   padding-top: 0.01rem;
   padding-bottom: 0.01rem;
