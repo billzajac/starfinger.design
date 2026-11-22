@@ -1,5 +1,5 @@
 // Replace a poster button with the Vimeo player when the visitor taps it.
-// See layouts/partials/portfolio.html.
+// See layouts/partials/portfolio.html. Styles: assets/css/style.css.
 document.addEventListener('click', (event) => {
   const button = event.target.closest('.vimeo-facade');
   if (!button) return;

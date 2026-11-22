@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 <script defer src="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.js"></script>
-<script defer src="{{ .Site.Params.staticPath }}/lightbox.js"></script>
+<script defer src="{{ (resources.Get "js/lightbox.js" | resources.Minify | resources.Fingerprint).RelPermalink }}"></script>
 
 <section id="single" class="py-0 py-sm-5">
   <div id="gallery" class="container">
@@ -75,5 +75,5 @@
   </button>
 </section>
 
-<script src="{{ .Site.Params.staticPath }}/js/scroll-to-top.js"></script>
-<script defer src="{{ .Site.Params.staticPath }}/js/vimeo-facade.js"></script>
+<script src="{{ (resources.Get "js/scroll-to-top.js" | resources.Minify | resources.Fingerprint).RelPermalink }}"></script>
+<script defer src="{{ (resources.Get "js/vimeo-facade.js" | resources.Minify | resources.Fingerprint).RelPermalink }}"></script>

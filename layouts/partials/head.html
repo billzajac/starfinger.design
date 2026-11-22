@@ -56,7 +56,8 @@
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/theme.css" media="all">
 
 <!-- Custom Styles -->
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/style.css">
+{{- $css := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
 <style>
     :root {

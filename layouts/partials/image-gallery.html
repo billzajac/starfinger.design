@@ -5,7 +5,7 @@
 {{- if and .fit (ne (string .fit) "default") (ne (string .fit) "") -}}
 {{- $fit = string .fit -}}
 {{- end -}}
-{{- /* Grid: 1 column on phones, 2 on tablets, 3 on desktop (see static/style.css). */ -}}
+{{- /* Grid: 1 column on phones, 2 on tablets, 3 on desktop (see assets/css/style.css). */ -}}
 {{- $sizes := "(max-width: 576px) 96vw, (max-width: 768px) 46vw, 30vw" -}}
 <div class="image-gallery">
   {{- $n := 0 }}

@@ -39,6 +39,6 @@
 <script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
 {{- end }}
 
-<script src="{{.Site.Params.staticPath}}/js/scroll-to-top.js"></script>
+<script src="{{ (resources.Get "js/scroll-to-top.js" | resources.Minify | resources.Fingerprint).RelPermalink }}"></script>
 
 {{ end }}

@@ -17,7 +17,8 @@ Portfolio website for Selma Starfinger, an international award-winning fashion d
 - `assets/images/` - Hero and general site images
 - `assets/video-posters/` - Poster images for the Vimeo videos (`<vimeo id>.jpg`)
 - `assets/css/lightbox.css` - Lightbox styles (plain CSS, minified and fingerprinted by Hugo)
-- `static/` - Favicons, logo (SVG), lightbox.js, style.css, js/vimeo-facade.js, `_headers` (Cloudflare cache rules)
+- `assets/css/style.css`, `assets/js/` - Site CSS and JS; templates minify and fingerprint them, so each change gets a new URL (Cloudflare lets browsers cache CSS/JS for 4 hours, and unversioned files went stale in Safari)
+- `static/` - Favicons, logo (SVG), `_headers` (Cloudflare cache rules)
 - `data/press.txt` - Press links (date + URL format), processed by `data/build_press.py`
 - `themes/hugo-profile` - Git submodule from `git@github.com:billzajac/hugo-profile.git`
 
@@ -34,10 +35,10 @@ hugo                    # Build to /public/
 - Links to https://1111.berlin carry `?ref=starfinger.design`
 - Images are processed by Hugo's image pipeline (resources/_gen/)
 - Goldmark renderer is `unsafe: false` (raw HTML in markdown is not rendered)
-- Custom lightbox implementation (`static/lightbox.js`, `assets/css/lightbox.css`)
+- Custom lightbox implementation (`assets/js/lightbox.js`, `assets/css/lightbox.css`)
 - Gallery grid uses WebP srcset (480/800/1200w); the lightbox loads the 1600px file from `data-full`
 - Icons are inline Font Awesome 6 SVGs from the theme (`layouts/partials/fa-icon.html`); do not load the FA all.js
-- Vimeo videos show a poster; the player loads on tap (`static/js/vimeo-facade.js`)
+- Vimeo videos show a poster; the player loads on tap (`assets/js/vimeo-facade.js`)
 
 ## Deployment
 Built and deployed via Cloudflare Pages (project `starfinger-design`, build command `hugo`, output `public`). `HUGO_VERSION` is set in the Pages project settings for production and preview; keep it equal to the local Hugo version. The `public/` directory is gitignored.

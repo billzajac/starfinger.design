@@ -10,7 +10,7 @@
 {{- $name = index $aliases $name | default $name -}}
 {{- $path := printf "themes/hugo-profile/static/fontawesome-6/svgs/%s/%s.svg" $dir $name -}}
 {{- if fileExists $path -}}
-{{- replace (readFile $path) "<svg " "<svg class=\"svg-inline--fa\" aria-hidden=\"true\" focusable=\"false\" fill=\"currentColor\" " | safeHTML -}}
+{{- replace (readFile $path) "<svg " "<svg class=\"svg-inline--fa\" height=\"1em\" aria-hidden=\"true\" focusable=\"false\" fill=\"currentColor\" " | safeHTML -}}
 {{- else -}}
 {{- errorf "fa-icon: no SVG for %q at %s" . $path -}}
 {{- end -}}
